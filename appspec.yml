@@ -1,0 +1,10 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-east-1:192654330312:task-definition/task-cicd-app:1
+        LoadBalancerInfo:
+          ContainerName: "cicd-app"
+          ContainerPort: "80"
+        PlatformVersion: "LATEST"
